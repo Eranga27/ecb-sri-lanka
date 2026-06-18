@@ -1,0 +1,132 @@
+/* community.css */
+.community-hero {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    padding: 100px 5% 0;
+    position: relative;
+    background: linear-gradient(135deg, var(--bg-dark) 0%, #1a365d 100%);
+    color: white;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.testimonial-card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    transition: var(--transition);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.quote-icon {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 3rem;
+    color: var(--accent);
+    opacity: 0.5;
+}
+
+.testimonial-text {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.author-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.author-info h4 {
+    font-size: 1.1rem;
+    margin-bottom: 2px;
+}
+
+.author-info p {
+    font-size: 0.85rem;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+/* Recognition Wall */
+.recognition-wall {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.recognition-card {
+    background: linear-gradient(135deg, var(--secondary) 0%, #f8fafc 100%);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid #edf2f7;
+    transition: var(--transition);
+}
+
+.recognition-card:hover {
+    transform: scale(1.03);
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary);
+}
+
+.recognition-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    background: var(--accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: var(--primary);
+}
+
+.recognition-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.recognition-name {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--text-main);
+    margin-bottom: 5px;
+}
+
+.recognition-lc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}

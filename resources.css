@@ -1,0 +1,128 @@
+/* resources.css */
+.resources-hero {
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    padding: 100px 5% 0;
+    position: relative;
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+    color: white;
+}
+
+.search-bar {
+    margin-top: 30px;
+    display: flex;
+    max-width: 600px;
+    background: white;
+    border-radius: 50px;
+    padding: 5px 10px;
+    box-shadow: var(--shadow-sm);
+}
+
+.search-input {
+    flex-grow: 1;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    outline: none;
+    background: transparent;
+    border-radius: 50px;
+}
+
+.search-btn {
+    background: var(--primary);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.search-btn:hover {
+    background: var(--primary-dark);
+}
+
+.category-filter {
+    display: flex;
+    gap: 15px;
+    margin: 40px 0 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 1px solid var(--glass-border);
+    background: white;
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition);
+    color: var(--text-muted);
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.resource-card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.resource-icon {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.resource-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.resource-desc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.resource-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #edf2f7;
+    padding-top: 15px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.download-btn {
+    color: var(--primary);
+    font-weight: 600;
+}
+.download-btn:hover {
+    text-decoration: underline;
+}

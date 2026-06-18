@@ -1,0 +1,131 @@
+/* cases.css */
+.cases-hero {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    padding: 100px 5% 0;
+    position: relative;
+    background: url('assets/case.png') no-repeat center center/cover;
+}
+
+.case-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.case-card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    position: relative;
+    border-top: 5px solid var(--primary);
+}
+
+.case-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.case-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--accent);
+    color: var(--primary);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.case-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    padding-right: 80px;
+}
+
+.case-situation, .case-question {
+    margin-bottom: 15px;
+}
+
+.case-label {
+    font-weight: 700;
+    color: var(--primary);
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.case-answer-section {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px dashed var(--glass-border);
+}
+
+.case-answer {
+    display: none;
+    background: var(--accent);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 15px;
+    border-left: 4px solid var(--primary);
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.case-answer.visible {
+    display: block;
+}
+
+/* Dashboard Insights */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.dash-card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+    border: 1px solid #edf2f7;
+}
+
+.dash-value {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 5px;
+}
+
+.dash-label {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.chart-container {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: var(--shadow-sm);
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    border: 1px solid #edf2f7;
+}
