@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audit & Compliance | ECB Sri Lanka</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .compliance-hero {
+            background: linear-gradient(135deg, rgba(10,31,68,0.9) 0%, rgba(5,16,36,0.95) 100%), url('assets/compliance_hero_placeholder.png') center/cover;
+            color: var(--secondary);
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 100px 5% 50px;
+        }
+
+        .compliance-hero h1 { font-size: 4rem; margin-bottom: 20px; color: var(--secondary); }
+        .compliance-hero p { font-size: 1.2rem; color: #a0aec0; max-width: 700px; margin: 0 auto; }
+
+        .audit-flow-vertical {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 600px;
+            margin: 40px auto;
+        }
+
+        .audit-step-card {
+            background: var(--secondary);
+            border-radius: 15px;
+            padding: 25px;
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .audit-step-card:hover {
+            transform: translateX(10px);
+            box-shadow: var(--shadow-md);
+            border-left: 4px solid var(--accent);
+        }
+
+        .step-num {
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: var(--secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .step-details h3 { color: var(--primary-dark); margin-bottom: 5px; }
+        .step-details p { color: var(--text-muted); font-size: 0.95rem; margin: 0; }
+        
+        .framework-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-transition-overlay"></div>
+
+    <nav class="navbar scrolled">
+        <a href="index.html" class="nav-brand">
+            <i class="fa-solid fa-shield-halved"></i> ECB <span>Sri Lanka</span>
+        </a>
+        <ul class="nav-links">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="culture.html" class="nav-link">Culture</a></li>
+            <li class="nav-item"><a href="education.html" class="nav-link">Education</a></li>
+            <li class="nav-item"><a href="compliance.html" class="nav-link" style="color: var(--primary);">Compliance</a></li>
+            <li class="nav-item"><a href="support.html" class="nav-link">Support</a></li>
+        </ul>
+        <a href="support.html" class="btn btn-primary nav-btn">Get Support</a>
+    </nav>
+
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+
+            <section class="compliance-hero">
+                <div class="hero-content">
+                    <h1 class="reveal-up">Audit & <span class="text-gradient" style="background: linear-gradient(90deg, #D4AF37 0%, #FFF 100%); -webkit-background-clip: text;">Compliance</span></h1>
+                    <p class="reveal-up" style="transition-delay: 0.1s;">Ensuring transparency and organizational excellence through rigorous compliance checks and structured audit frameworks.</p>
+                </div>
+            </section>
+
+            <section class="section section-light">
+                <div class="section-header reveal-up">
+                    <h2 class="section-title">The Audit Process</h2>
+                    <p class="section-subtitle">A transparent workflow from preparation to closure.</p>
+                </div>
+
+                <div class="audit-flow-vertical reveal-up">
+                    <div class="audit-step-card">
+                        <div class="step-num">1</div>
+                        <div class="step-details">
+                            <h3>Preparation</h3>
+                            <p>Local committees prepare required documentation and evidence prior to the audit deadline.</p>
+                        </div>
+                    </div>
+                    <div class="audit-step-card">
+                        <div class="step-num">2</div>
+                        <div class="step-details">
+                            <h3>Review</h3>
+                            <p>ECB conducts a thorough review of documents, policies, and exchange systems.</p>
+                        </div>
+                    </div>
+                    <div class="audit-step-card">
+                        <div class="step-num">3</div>
+                        <div class="step-details">
+                            <h3>Findings</h3>
+                            <p>A detailed report is generated highlighting strengths, gaps, and areas of non-compliance.</p>
+                        </div>
+                    </div>
+                    <div class="audit-step-card">
+                        <div class="step-num">4</div>
+                        <div class="step-details">
+                            <h3>Recommendations</h3>
+                            <p>ECB provides actionable steps to resolve gaps and improve delivery.</p>
+                        </div>
+                    </div>
+                    <div class="audit-step-card">
+                        <div class="step-num"><i class="fa-solid fa-check"></i></div>
+                        <div class="step-details">
+                            <h3>Closure</h3>
+                            <p>Final status granted upon successful implementation of all recommendations.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section section-dark">
+                <div class="section-header reveal-up">
+                    <h2 class="section-title">Compliance Framework</h2>
+                </div>
+                
+                <div class="framework-grid reveal-up">
+                    <div class="glass-card" style="max-width: 100%;">
+                        <h3 style="color: var(--accent);"><i class="fa-solid fa-list-check"></i> Exchange Standards</h3>
+                        <p style="color: #a0aec0;">Monitoring the delivery of the 16 minimum criteria for every exchange.</p>
+                    </div>
+                    <div class="glass-card" style="max-width: 100%;">
+                        <h3 style="color: var(--accent);"><i class="fa-solid fa-database"></i> Data Management</h3>
+                        <p style="color: #a0aec0;">Ensuring GDPR compliance and secure handling of participant data.</p>
+                    </div>
+                    <div class="glass-card" style="max-width: 100%;">
+                        <h3 style="color: var(--accent);"><i class="fa-solid fa-triangle-exclamation"></i> Risk Management</h3>
+                        <p style="color: #a0aec0;">Proactive identification and mitigation of legal and operational risks.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <a href="index.html" class="nav-brand" style="color: white; margin-bottom: 20px;">
+                            <i class="fa-solid fa-shield-halved"></i> ECB <span style="color: var(--accent);">Sri Lanka</span>
+                        </a>
+                        <p style="color: #a0aec0; font-size: 0.9rem;">Building a culture of quality, compliance, participant safety, and exchange excellence.</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 Entity Control Board - AIESEC in Sri Lanka. All Rights Reserved.</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

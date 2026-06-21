@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Support | ECB Sri Lanka</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .support-hero {
+            background: linear-gradient(135deg, rgba(10,31,68,0.9) 0%, rgba(5,16,36,0.95) 100%), url('assets/support_hero_placeholder.png') center/cover;
+            color: var(--secondary);
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 100px 5% 50px;
+        }
+
+        .support-hero h1 { font-size: 4rem; margin-bottom: 20px; color: var(--secondary); }
+        .support-hero p { font-size: 1.2rem; color: #a0aec0; max-width: 700px; margin: 0 auto; }
+
+        .support-container {
+            display: flex;
+            gap: 60px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .support-content { flex: 1; }
+        .support-form { flex: 1; background: var(--secondary); padding: 40px; border-radius: 20px; box-shadow: var(--shadow-md); }
+
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: 600; color: var(--primary-dark); }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            font-family: inherit;
+            outline: none;
+            transition: var(--transition);
+        }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(10,31,68,0.1);
+        }
+
+        .support-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        @media(max-width: 992px) {
+            .support-container { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-transition-overlay"></div>
+
+    <nav class="navbar scrolled">
+        <a href="index.html" class="nav-brand">
+            <i class="fa-solid fa-shield-halved"></i> ECB <span>Sri Lanka</span>
+        </a>
+        <ul class="nav-links">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="culture.html" class="nav-link">Culture</a></li>
+            <li class="nav-item"><a href="education.html" class="nav-link">Education</a></li>
+            <li class="nav-item"><a href="compliance.html" class="nav-link">Compliance</a></li>
+            <li class="nav-item"><a href="support.html" class="nav-link" style="color: var(--primary);">Support</a></li>
+        </ul>
+        <a href="support.html" class="btn btn-primary nav-btn">Get Support</a>
+    </nav>
+
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+
+            <section class="support-hero">
+                <div class="hero-content">
+                    <h1 class="reveal-up">We're Here to <span class="text-gradient" style="background: linear-gradient(90deg, #D4AF37 0%, #FFF 100%); -webkit-background-clip: text;">Help</span></h1>
+                    <p class="reveal-up" style="transition-delay: 0.1s;">Submit inquiries, report standard breaks, or seek policy clarifications. Our dedicated team is ready to support you.</p>
+                </div>
+            </section>
+
+            <section class="section section-light">
+                <div class="support-container reveal-up">
+                    
+                    <div class="support-content">
+                        <h2>Need Assistance?</h2>
+                        <p style="color: var(--text-muted); margin-bottom: 20px; line-height: 1.8;">Our support process is designed to be swift and confidential. Whether you are an Exchange Participant facing an issue or an AIESEC member needing policy clarification, we are here to guide you.</p>
+                        
+                        <div class="support-cards">
+                            <div class="glass-card" style="background: var(--bg-main); box-shadow: none; max-width: 100%;">
+                                <h3 style="font-size: 1.1rem; margin-bottom: 5px;"><i class="fa-solid fa-triangle-exclamation"></i> Standard Breaks</h3>
+                                <p style="font-size: 0.9rem;">Report issues regarding accommodation, job description, or safety.</p>
+                            </div>
+                            <div class="glass-card" style="background: var(--bg-main); box-shadow: none; max-width: 100%;">
+                                <h3 style="font-size: 1.1rem; margin-bottom: 5px;"><i class="fa-solid fa-book"></i> Policy Questions</h3>
+                                <p style="font-size: 0.9rem;">Ask for clarification on national or global AIESEC policies.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="support-form">
+                        <h3 style="margin-bottom: 20px; color: var(--primary);">Submit a Query</h3>
+                        <form>
+                            <div class="form-group">
+                                <label>Your Name</label>
+                                <input type="text" placeholder="John Doe">
+                            </div>
+                            <div class="form-group">
+                                <label>Email Address</label>
+                                <input type="email" placeholder="john@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label>Category</label>
+                                <select>
+                                    <option>Exchange Concern / Standard Break</option>
+                                    <option>Policy Clarification</option>
+                                    <option>Audit Inquiry</option>
+                                    <option>General Support</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Message</label>
+                                <textarea rows="5" placeholder="Please describe your issue in detail..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Request</button>
+                        </form>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <a href="index.html" class="nav-brand" style="color: white; margin-bottom: 20px;">
+                            <i class="fa-solid fa-shield-halved"></i> ECB <span style="color: var(--accent);">Sri Lanka</span>
+                        </a>
+                        <p style="color: #a0aec0; font-size: 0.9rem;">Building a culture of quality, compliance, participant safety, and exchange excellence.</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 Entity Control Board - AIESEC in Sri Lanka. All Rights Reserved.</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

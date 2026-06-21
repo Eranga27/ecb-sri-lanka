@@ -3,221 +3,217 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ECB Sri Lanka | About & Insights</title>
+    <title>About ECB | ECB Sri Lanka</title>
     <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .about-hero {
+            background: linear-gradient(135deg, rgba(10,31,68,0.9) 0%, rgba(5,16,36,0.95) 100%), url('assets/about_hero_placeholder.png') center/cover;
+            color: var(--secondary);
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 100px 5% 50px;
+        }
+
+        .about-hero h1 { font-size: 4rem; margin-bottom: 20px; color: var(--secondary); }
+        .about-hero p { font-size: 1.2rem; color: #a0aec0; max-width: 700px; margin: 0 auto; }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background: var(--primary);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+            border-radius: 4px;
+        }
+
+        .timeline-item {
+            padding: 20px 40px;
+            position: relative;
+            background: inherit;
+            width: 50%;
+        }
+
+        .timeline-item:nth-child(odd) { left: 0; text-align: right; }
+        .timeline-item:nth-child(even) { left: 50%; }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: -10px;
+            background: var(--secondary);
+            border: 4px solid var(--accent);
+            top: 30px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .timeline-item:nth-child(even)::after { left: -10px; }
+
+        .timeline-content {
+            padding: 20px 30px;
+            background: var(--secondary);
+            border-radius: 15px;
+            box-shadow: var(--shadow-md);
+        }
+
+        .timeline-content h3 { color: var(--primary); font-size: 1.5rem; margin-bottom: 10px; }
+        
+        /* Team Grid */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .team-card {
+            background: var(--secondary);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .team-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-lg); }
+
+        .team-img {
+            width: 100%;
+            height: 250px;
+            background: var(--bg-main);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: var(--text-muted);
+        }
+
+        .team-info { padding: 25px; }
+        .team-info h4 { font-size: 1.2rem; color: var(--primary); margin-bottom: 5px; }
+        .team-info .role { color: var(--accent); font-weight: 600; font-size: 0.9rem; margin-bottom: 15px; display: block; }
+        .team-info p { font-size: 0.9rem; color: var(--text-muted); }
+    </style>
 </head>
 <body>
 
-    <!-- Navigation -->
+    <div class="page-transition-overlay"></div>
+
     <nav class="navbar scrolled">
         <a href="index.html" class="nav-brand">
             <i class="fa-solid fa-shield-halved"></i> ECB <span>Sri Lanka</span>
         </a>
         <ul class="nav-links">
             <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-            <li class="nav-item">
-                <a class="nav-link">Learn <i class="fa-solid fa-chevron-down" style="font-size: 0.8rem;"></i></a>
-                <div class="nav-dropdown">
-                    <a href="learn.html#fundamentals" class="dropdown-link">Exchange Fundamentals</a>
-                    <a href="learn.html#journey" class="dropdown-link">Exchange Journey</a>
-                    <a href="learn.html#standards" class="dropdown-link">Standards Center</a>
-                </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link">Academy <i class="fa-solid fa-chevron-down" style="font-size: 0.8rem;"></i></a>
-                <div class="nav-dropdown">
-                    <a href="academy.html" class="dropdown-link">Learning Tracks</a>
-                    <a href="academy.html" class="dropdown-link">Certifications</a>
-                    <a href="academy.html#quiz" class="dropdown-link">Quiz Arena</a>
-                </div>
-            </li>
-            <li class="nav-item"><a href="resources.html" class="nav-link">Resources</a></li>
-            <li class="nav-item"><a href="cases.html" class="nav-link">Cases</a></li>
-            <li class="nav-item"><a href="community.html" class="nav-link">Community</a></li>
-            <li class="nav-item"><a href="#" class="nav-link" style="color: var(--primary);">About ECB</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link" style="color: var(--primary);">About</a></li>
+            <li class="nav-item"><a href="culture.html" class="nav-link">Culture</a></li>
+            <li class="nav-item"><a href="education.html" class="nav-link">Education</a></li>
+            <li class="nav-item"><a href="compliance.html" class="nav-link">Compliance</a></li>
+            <li class="nav-item"><a href="support.html" class="nav-link">Support</a></li>
         </ul>
-        <a href="academy.html" class="btn btn-primary">Start Learning</a>
+        <a href="support.html" class="btn btn-primary nav-btn">Get Support</a>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="about-hero">
-        <div class="hero-content animate-on-scroll" style="width: 100%; text-align: center; max-width: 900px; margin: 0 auto;">
-            <h1 class="hero-title" style="color: white;">About the Entity Control Board</h1>
-            <p class="mission-text">Our mission is to build a culture of quality, accountability, participant safety, and exchange excellence across all entities of AIESEC in Sri Lanka.</p>
-        </div>
-    </section>
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
 
-    <!-- Departments -->
-    <section class="section section-light">
-        <div class="section-header animate-on-scroll">
-            <h2 class="section-title">Our Departments</h2>
-            <p class="section-subtitle">The ECB operates through specialized departments to ensure comprehensive coverage of all quality and compliance aspects.</p>
-        </div>
+            <section class="about-hero">
+                <div class="hero-content">
+                    <h1 class="reveal-up">About <span class="text-gradient" style="background: linear-gradient(90deg, #D4AF37 0%, #FFF 100%); -webkit-background-clip: text;">ECB</span></h1>
+                    <p class="reveal-up" style="transition-delay: 0.1s;">The independent quality assurance, audit, and compliance body of AIESEC in Sri Lanka.</p>
+                </div>
+            </section>
 
-        <div class="dept-grid animate-on-scroll">
-            <div class="dept-card">
-                <div class="dept-icon"><i class="fa-solid fa-book-open-reader"></i></div>
-                <h3>Education & Compliance</h3>
-                <p style="color: var(--text-muted); margin-top: 10px; font-size: 0.9rem;">Developing learning paths, resources, and ensuring members understand AIESEC standards.</p>
-            </div>
-            <div class="dept-card">
-                <div class="dept-icon"><i class="fa-solid fa-clipboard-check"></i></div>
-                <h3>Audits & Compliance</h3>
-                <p style="color: var(--text-muted); margin-top: 10px; font-size: 0.9rem;">Conducting regular audits to verify that LCs are adhering to standard operating procedures.</p>
-            </div>
-            <div class="dept-card">
-                <div class="dept-icon"><i class="fa-solid fa-headset"></i></div>
-                <h3>Customer Support & Case Management</h3>
-                <p style="color: var(--text-muted); margin-top: 10px; font-size: 0.9rem;">Handling standard violations, participant issues, and providing swift case resolutions.</p>
-            </div>
-            <div class="dept-card">
-                <div class="dept-icon"><i class="fa-solid fa-bullhorn"></i></div>
-                <h3>Digital Marketing & Comm.</h3>
-                <p style="color: var(--text-muted); margin-top: 10px; font-size: 0.9rem;">Promoting the importance of quality and managing ECB's internal communication strategies.</p>
-            </div>
-        </div>
-    </section>
+            <section class="section section-light">
+                <div class="section-header reveal-up">
+                    <h2 class="section-title">Our Purpose</h2>
+                    <p class="section-subtitle">We exist to protect exchange standards, ensure compliance, safeguard customer experience, and strengthen accountability.</p>
+                </div>
 
-    <!-- Meet the Team -->
-    <section class="section section-main" style="background: var(--bg-main);">
-        <div class="section-header animate-on-scroll">
-            <h2 class="section-title">Meet the Team</h2>
-            <p class="section-subtitle">The dedicated individuals driving exchange excellence in Sri Lanka.</p>
-        </div>
-
-        <div class="team-grid animate-on-scroll">
-            <div class="team-card">
-                <div class="team-image"><i class="fa-solid fa-user"></i></div>
-                <div class="team-info">
-                    <h3 class="team-name">John Doe</h3>
-                    <div class="team-role">ECB Chair</div>
-                    <div class="team-social">
-                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                <div class="timeline reveal-up">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Vision</h3>
+                            <p>To cultivate a sustainable exchange culture built on accountability, quality, and trust.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Mission</h3>
+                            <p>To protect, educate, support, and strengthen AIESEC in Sri Lanka through independent quality assurance, compliance management, and customer-centric governance.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="team-card">
-                <div class="team-image"><i class="fa-solid fa-user"></i></div>
-                <div class="team-info">
-                    <h3 class="team-name">Jane Smith</h3>
-                    <div class="team-role">Head of Education</div>
-                    <div class="team-social">
-                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="#"><i class="fa-solid fa-envelope"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="team-card">
-                <div class="team-image"><i class="fa-solid fa-user"></i></div>
-                <div class="team-info">
-                    <h3 class="team-name">Michael Chen</h3>
-                    <div class="team-role">Head of Audits</div>
-                    <div class="team-social">
-                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="#"><i class="fa-solid fa-envelope"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="team-card">
-                <div class="team-image"><i class="fa-solid fa-user"></i></div>
-                <div class="team-info">
-                    <h3 class="team-name">Sarah Silva</h3>
-                    <div class="team-role">Head of Case Management</div>
-                    <div class="team-social">
-                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="#"><i class="fa-solid fa-envelope"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <!-- ECB Insights Blog -->
-    <section class="section section-light">
-        <div class="section-header animate-on-scroll">
-            <h2 class="section-title">ECB Insights Blog</h2>
-            <p class="section-subtitle">Articles on quality, compliance, exchange delivery, and leadership.</p>
-        </div>
-
-        <div class="blog-grid animate-on-scroll">
-            <div class="blog-card">
-                <div class="blog-image"><i class="fa-solid fa-file-contract"></i></div>
-                <div class="blog-content">
-                    <div class="blog-category">Quality</div>
-                    <h3 class="blog-title"><a href="#">Why Exchange Standards Matter More Than Ever</a></h3>
-                    <div class="blog-meta">
-                        <span>By John Doe</span>
-                        <span>Oct 12, 2026</span>
+            <section class="section section-dark">
+                <div class="section-header reveal-up">
+                    <h2 class="section-title">Meet The Team</h2>
+                    <p class="section-subtitle">The dedicated individuals working tirelessly to maintain exchange integrity.</p>
+                </div>
+                
+                <div class="team-grid reveal-up">
+                    <div class="team-card">
+                        <div class="team-img"><i class="fa-solid fa-user-tie"></i></div>
+                        <div class="team-info">
+                            <h4>John Doe</h4>
+                            <span class="role">ECB Chair</span>
+                            <p>"Leading the charge for quality."</p>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-img"><i class="fa-solid fa-user"></i></div>
+                        <div class="team-info">
+                            <h4>Jane Smith</h4>
+                            <span class="role">Head of Audit</span>
+                            <p>"Ensuring framework compliance."</p>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-img"><i class="fa-solid fa-user"></i></div>
+                        <div class="team-info">
+                            <h4>Alan Turing</h4>
+                            <span class="role">Head of Education</span>
+                            <p>"Empowering through knowledge."</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="blog-card">
-                <div class="blog-image"><i class="fa-solid fa-handshake"></i></div>
-                <div class="blog-content">
-                    <div class="blog-category">Exchange Delivery</div>
-                    <h3 class="blog-title"><a href="#">Common Matching Mistakes and How to Avoid Them</a></h3>
-                    <div class="blog-meta">
-                        <span>By Jane Smith</span>
-                        <span>Oct 05, 2026</span>
+            </section>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <a href="index.html" class="nav-brand" style="color: white; margin-bottom: 20px;">
+                            <i class="fa-solid fa-shield-halved"></i> ECB <span style="color: var(--accent);">Sri Lanka</span>
+                        </a>
+                        <p style="color: #a0aec0; font-size: 0.9rem;">Building a culture of quality, compliance, participant safety, and exchange excellence.</p>
                     </div>
                 </div>
-            </div>
-            <div class="blog-card">
-                <div class="blog-image"><i class="fa-solid fa-folder-open"></i></div>
-                <div class="blog-content">
-                    <div class="blog-category">Compliance</div>
-                    <h3 class="blog-title"><a href="#">Documentation Best Practices for Audit Readiness</a></h3>
-                    <div class="blog-meta">
-                        <span>By Michael Chen</span>
-                        <span>Sep 28, 2026</span>
-                    </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 Entity Control Board - AIESEC in Sri Lanka. All Rights Reserved.</p>
                 </div>
-            </div>
+            </footer>
         </div>
-    </section>
+    </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-grid">
-            <div class="footer-col">
-                <a href="index.html" class="nav-brand" style="color: white; margin-bottom: 20px;">
-                    <i class="fa-solid fa-shield-halved"></i> ECB <span style="color: var(--primary);">Sri Lanka</span>
-                </a>
-                <p style="color: #a0aec0; font-size: 0.9rem;">Building a culture of quality, compliance, participant safety, and exchange excellence.</p>
-            </div>
-            <div class="footer-col">
-                <h4>Quick Links</h4>
-                <ul class="footer-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About ECB</a></li>
-                    <li><a href="cases.html">Case Academy</a></li>
-                    <li><a href="community.html">Community</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Learning Resources</h4>
-                <ul class="footer-links">
-                    <li><a href="academy.html">Academy</a></li>
-                    <li><a href="learn.html#standards">Standards Center</a></li>
-                    <li><a href="resources.html">Resource Library</a></li>
-                    <li><a href="academy.html#quiz">Quiz Arena</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Contact Us</h4>
-                <ul class="footer-links">
-                    <li><i class="fa-solid fa-envelope" style="margin-right: 10px;"></i> ecb@aiesec.lk</li>
-                    <li><i class="fa-solid fa-location-dot" style="margin-right: 10px;"></i> Colombo, Sri Lanka</li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Entity Control Board - AIESEC in Sri Lanka. All Rights Reserved.</p>
-        </div>
-    </footer>
-
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
