@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awareness Hub | ECB Sri Lanka</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .awareness-hero {
+            background: linear-gradient(135deg, rgba(10,31,68,0.9) 0%, rgba(5,16,36,0.95) 100%), url('assets/awareness_hero_placeholder.png') center/cover;
+            color: var(--secondary);
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 100px 5% 50px;
+        }
+
+        .awareness-hero h1 { font-size: 4rem; margin-bottom: 20px; color: var(--secondary); }
+        .awareness-hero p { font-size: 1.2rem; color: #a0aec0; max-width: 700px; margin: 0 auto; }
+
+        .article-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .article-card {
+            background: var(--secondary);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .article-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .article-img {
+            height: 200px;
+            background: var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--primary);
+        }
+
+        .article-content {
+            padding: 30px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .article-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .article-content h3 {
+            font-size: 1.4rem;
+            color: var(--primary-dark);
+            margin-bottom: 15px;
+        }
+
+        .article-content p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 25px;
+            flex-grow: 1;
+        }
+
+        .read-more {
+            color: var(--primary);
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+        }
+
+        .read-more:hover { color: var(--accent); gap: 12px; }
+
+        .campaign-banner {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            border-radius: 20px;
+            padding: 60px 5%;
+            text-align: center;
+            color: var(--secondary);
+            margin: 60px auto;
+            max-width: 1000px;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .campaign-banner::after {
+            content: '\f0a1';
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            font-size: 20rem;
+            color: rgba(255,255,255,0.05);
+            right: -50px;
+            bottom: -50px;
+            transform: rotate(-15deg);
+        }
+
+        .campaign-banner h2 { font-size: 2.5rem; margin-bottom: 15px; }
+        .campaign-banner p { font-size: 1.1rem; color: #a0aec0; max-width: 600px; margin: 0 auto 30px; }
+
+    </style>
+</head>
+<body>
+
+    <div class="page-transition-overlay"></div>
+
+    <nav class="navbar scrolled">
+        <a href="index.html" class="nav-brand">
+            <i class="fa-solid fa-shield-halved"></i> ECB <span>Sri Lanka</span>
+        </a>
+        <ul class="nav-links">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="culture.html" class="nav-link">Culture</a></li>
+            <li class="nav-item"><a href="education.html" class="nav-link">Education</a></li>
+            <li class="nav-item"><a href="compliance.html" class="nav-link">Compliance</a></li>
+            <li class="nav-item"><a href="support.html" class="nav-link">Support</a></li>
+            <li class="nav-item"><a href="awareness.html" class="nav-link" style="color: var(--primary);">Awareness</a></li>
+        </ul>
+        <a href="support.html" class="btn btn-primary nav-btn">Get Support</a>
+    </nav>
+
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+
+            <section class="awareness-hero">
+                <div class="hero-content">
+                    <h1 class="reveal-up">Awareness <span class="text-gradient" style="background: linear-gradient(90deg, #D4AF37 0%, #FFF 100%); -webkit-background-clip: text;">Hub</span></h1>
+                    <p class="reveal-up" style="transition-delay: 0.1s;">Discover the latest insights, success stories, and campaigns driving exchange excellence across AIESEC in Sri Lanka.</p>
+                </div>
+            </section>
+
+            <section class="section section-light">
+                <div class="section-header reveal-up">
+                    <h2 class="section-title">Latest Insights & Stories</h2>
+                    <p class="section-subtitle">Learn from past experiences, celebrate exchange successes, and stay updated on the latest quality trends.</p>
+                </div>
+
+                <div class="article-grid reveal-up">
+                    <!-- Article 1 -->
+                    <div class="article-card">
+                        <div class="article-img"><i class="fa-solid fa-trophy"></i></div>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span><i class="fa-solid fa-calendar"></i> Oct 15, 2026</span>
+                                <span style="color: var(--primary);">Success Story</span>
+                            </div>
+                            <h3>Delivering the Perfect iGV Exchange</h3>
+                            <p>How one local committee achieved a 100% standard fulfillment rate during their summer peak, and the key takeaways you can apply.</p>
+                            <a href="#" class="read-more">Read Full Story <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Article 2 -->
+                    <div class="article-card">
+                        <div class="article-img" style="background: var(--bg-main);"><i class="fa-solid fa-lightbulb"></i></div>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span><i class="fa-solid fa-calendar"></i> Sep 28, 2026</span>
+                                <span style="color: var(--primary);">Lesson Learned</span>
+                            </div>
+                            <h3>Navigating Visa Complications</h3>
+                            <p>A case study on proactive expectation setting. Learn how properly managing visa timelines can save an exchange experience from failure.</p>
+                            <a href="#" class="read-more">Read Full Story <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Article 3 -->
+                    <div class="article-card">
+                        <div class="article-img" style="background: var(--text-main); color: var(--secondary);"><i class="fa-solid fa-bullhorn"></i></div>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span><i class="fa-solid fa-calendar"></i> Sep 10, 2026</span>
+                                <span style="color: var(--primary);">ECB Update</span>
+                            </div>
+                            <h3>Changes to the National Audit Framework</h3>
+                            <p>An overview of the updated criteria for the upcoming Q4 Compliance Audit. What you need to know to prepare your committee.</p>
+                            <a href="#" class="read-more">Read Full Story <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section section-dark" style="padding: 40px 5%;">
+                <div class="campaign-banner reveal-up">
+                    <h2 style="color: var(--secondary);">Quality is Not an Act, It is a Habit</h2>
+                    <p>Join the "Exchange Excellence 2026" campaign. Advocate for better standard delivery, report unsafe environments, and champion the customer experience in your local entity.</p>
+                    <a href="education.html" class="btn btn-outline" style="border-color: var(--accent); color: var(--accent);">Access Campaign Toolkit</a>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <a href="index.html" class="nav-brand" style="color: white; margin-bottom: 20px;">
+                            <i class="fa-solid fa-shield-halved"></i> ECB <span style="color: var(--accent);">Sri Lanka</span>
+                        </a>
+                        <p style="color: #a0aec0; font-size: 0.9rem;">Building a culture of quality, compliance, participant safety, and exchange excellence.</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 Entity Control Board - AIESEC in Sri Lanka. All Rights Reserved.</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
