@@ -6,8 +6,12 @@
     <title>ECB Sri Lanka | Exchange Excellence</title>
     <meta name="description" content="Entity Control Board (ECB) of AIESEC in Sri Lanka - Building a culture of quality, compliance, and exchange excellence.">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+
+    <!-- Page Transition Overlay -->
+    <div class="page-transition-overlay"></div>
 
     <!-- Navigation -->
     <nav class="navbar">
@@ -16,287 +20,160 @@
         </a>
         <ul class="nav-links">
             <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-            <li class="nav-item">
-                <a class="nav-link">Learn <i class="fa-solid fa-chevron-down" style="font-size: 0.8rem;"></i></a>
-                <div class="nav-dropdown">
-                    <a href="learn.html#fundamentals" class="dropdown-link">Exchange Fundamentals</a>
-                    <a href="learn.html#journey" class="dropdown-link">Exchange Journey</a>
-                    <a href="learn.html#standards" class="dropdown-link">Standards Center</a>
-                </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link">Academy <i class="fa-solid fa-chevron-down" style="font-size: 0.8rem;"></i></a>
-                <div class="nav-dropdown">
-                    <a href="academy.html" class="dropdown-link">Learning Tracks</a>
-                    <a href="academy.html" class="dropdown-link">Certifications</a>
-                    <a href="academy.html#quiz" class="dropdown-link">Quiz Arena</a>
-                </div>
-            </li>
-            <li class="nav-item"><a href="resources.html" class="nav-link">Resources</a></li>
-            <li class="nav-item"><a href="cases.html" class="nav-link">Cases</a></li>
-            <li class="nav-item"><a href="community.html" class="nav-link">Community</a></li>
-            <li class="nav-item"><a href="about.html" class="nav-link">About ECB</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="culture.html" class="nav-link">Culture</a></li>
+            <li class="nav-item"><a href="education.html" class="nav-link">Education</a></li>
+            <li class="nav-item"><a href="compliance.html" class="nav-link">Compliance</a></li>
+            <li class="nav-item"><a href="support.html" class="nav-link">Support</a></li>
         </ul>
-        <a href="academy.html" class="btn btn-primary">Start Learning</a>
+        <a href="support.html" class="btn btn-primary nav-btn">Get Support</a>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content animate-on-scroll">
-            <h1 class="hero-title">Exchange Excellence <span class="text-gradient">Starts Here</span></h1>
-            <p class="hero-subtitle">Building a culture of quality, compliance, participant safety, and exchange excellence across AIESEC in Sri Lanka.</p>
-            <div class="hero-buttons">
-                <a href="academy.html" class="btn btn-primary">Start Learning</a>
-                <a href="learn.html#standards" class="btn btn-outline">Explore Standards</a>
-            </div>
-            
-            <div class="stats-grid">
-                <div class="stat-card animate-on-scroll">
-                    <div class="stat-number" data-target="16">0</div>
-                    <div class="stat-label">Exchange Standards</div>
-                </div>
-                <div class="stat-card animate-on-scroll" style="transition-delay: 0.1s;">
-                    <div class="stat-number" data-target="150">0</div>
-                    <div class="stat-label">Learning Resources</div>
-                </div>
-                <div class="stat-card animate-on-scroll" style="transition-delay: 0.2s;">
-                    <div class="stat-number" data-target="45">0</div>
-                    <div class="stat-label">Case Studies</div>
-                </div>
-                <div class="stat-card animate-on-scroll" style="transition-delay: 0.3s;">
-                    <div class="stat-number" data-target="1200">0</div>
-                    <div class="stat-label">Certified Learners</div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
 
-    <!-- Why Quality Matters -->
-    <section class="section section-light">
-        <div class="section-header animate-on-scroll">
-            <h2 class="section-title">Why Quality Matters</h2>
-            <p class="section-subtitle">Every exchange impacts someone's life journey. ECB exists to ensure every participant receives a safe, meaningful, and leadership-focused experience aligned with global AIESEC standards.</p>
-        </div>
-        
-        <div class="card-grid">
-            <div class="feature-card animate-on-scroll">
-                <div class="feature-icon"><i class="fa-solid fa-star"></i></div>
-                <h3 class="feature-title">Quality</h3>
-                <p class="feature-desc">Delivering exceptional participant experiences through rigorous standard implementation and continuous monitoring.</p>
-            </div>
-            <div class="feature-card animate-on-scroll" style="transition-delay: 0.1s;">
-                <div class="feature-icon"><i class="fa-solid fa-shield-check"></i></div>
-                <h3 class="feature-title">Compliance</h3>
-                <p class="feature-desc">Protecting exchange integrity and standards by ensuring strict adherence to national and global policies.</p>
-            </div>
-            <div class="feature-card animate-on-scroll" style="transition-delay: 0.2s;">
-                <div class="feature-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-                <h3 class="feature-title">Education</h3>
-                <p class="feature-desc">Empowering members through continuous learning, case studies, and structured educational paths.</p>
-            </div>
-        </div>
-    </section>
+            <!-- Hero Section -->
+            <section class="hero teaser-hero">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <div class="hero-badge reveal-up">Entity Control Board</div>
+                    <h1 class="hero-title reveal-up" style="transition-delay: 0.1s;">Protecting the Integrity of <span class="text-gradient">Every Exchange</span></h1>
+                    <p class="hero-subtitle reveal-up" style="transition-delay: 0.2s;">The independent quality and compliance body ensuring excellence, accountability, and customer-centricity across AIESEC in Sri Lanka.</p>
+                    <div class="hero-buttons reveal-up" style="transition-delay: 0.3s;">
+                        <a href="#about-teaser" class="btn btn-primary scroll-to">Explore ECB</a>
+                        <a href="education.html" class="btn btn-outline">Exchange Standards</a>
+                    </div>
+                </div>
+            </section>
 
-    <!-- Exchange Excellence Framework -->
-    <section class="section section-dark">
-        <div class="section-header animate-on-scroll">
-            <h2 class="section-title">Exchange Excellence Framework</h2>
-            <p class="section-subtitle">A systematic approach to ensuring high-quality experiences for every stakeholder.</p>
-        </div>
-        
-        <div class="framework-flow">
-            <div class="flow-step animate-on-scroll">
-                <i class="fa-solid fa-book-open"></i>
-                <div class="flow-content">
-                    <h3>Learn</h3>
-                    <p>Knowledge & Education</p>
+            <!-- Teaser 1: The Guardians (About) -->
+            <section id="about-teaser" class="teaser-section section-light">
+                <div class="teaser-container">
+                    <div class="teaser-content reveal-left">
+                        <div class="teaser-icon"><i class="fa-solid fa-users-viewfinder"></i></div>
+                        <h2>The Guardians of Quality</h2>
+                        <p>We are the independent governance body dedicated to risk mitigation, compliance, and customer satisfaction. Discover why ECB exists and meet the team driving sustainable exchange growth.</p>
+                        <a href="about.html" class="btn btn-outline teaser-btn">Who We Are <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <div class="teaser-visual reveal-right">
+                        <div class="glass-card">
+                            <h3><i class="fa-solid fa-scale-balanced"></i> Independence</h3>
+                            <p>Operating with full autonomy to protect standards.</p>
+                        </div>
+                        <div class="glass-card" style="margin-top: 20px; margin-left: 40px;">
+                            <h3><i class="fa-solid fa-shield-check"></i> Accountability</h3>
+                            <p>Ensuring global and national policy adherence.</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="flow-arrow"><i class="fa-solid fa-arrow-down"></i></div>
-            <div class="flow-step animate-on-scroll">
-                <i class="fa-solid fa-gears"></i>
-                <div class="flow-content">
-                    <h3>Apply</h3>
-                    <p>Standards & Delivery</p>
-                </div>
-            </div>
-            <div class="flow-arrow"><i class="fa-solid fa-arrow-down"></i></div>
-            <div class="flow-step animate-on-scroll">
-                <i class="fa-solid fa-chart-pie"></i>
-                <div class="flow-content">
-                    <h3>Monitor</h3>
-                    <p>Quality Assurance</p>
-                </div>
-            </div>
-            <div class="flow-arrow"><i class="fa-solid fa-arrow-down"></i></div>
-            <div class="flow-step animate-on-scroll">
-                <i class="fa-solid fa-arrow-trend-up"></i>
-                <div class="flow-content">
-                    <h3>Improve</h3>
-                    <p>Audits & Continuous Development</p>
-                </div>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <!-- Learning Paths -->
-    <section class="section section-light">
-        <div class="section-header animate-on-scroll">
-            <h2 class="section-title">Learning Paths</h2>
-            <p class="section-subtitle">Structured educational journeys designed to build expertise at every level of your AIESEC experience.</p>
-        </div>
-        
-        <div class="card-grid">
-            <div class="path-card animate-on-scroll">
-                <div class="path-header">
-                    <h3>Explorer Path</h3>
-                    <p>For new members</p>
+            <!-- Teaser 2: The Culture -->
+            <section class="teaser-section section-dark">
+                <div class="teaser-container reverse">
+                    <div class="teaser-content reveal-right">
+                        <div class="teaser-icon"><i class="fa-solid fa-globe"></i></div>
+                        <h2>Understanding Exchange Culture</h2>
+                        <p>Every exchange impacts a life. We foster a culture built on responsibility, customer-centricity, and ethical delivery. Explore the complete interactive customer journey.</p>
+                        <a href="culture.html" class="btn btn-primary teaser-btn">Explore Culture <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <div class="teaser-visual reveal-left">
+                        <div class="journey-preview">
+                            <div class="journey-node">Attraction</div>
+                            <div class="journey-line"></div>
+                            <div class="journey-node active">Consideration</div>
+                            <div class="journey-line"></div>
+                            <div class="journey-node">Preparation</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="path-body">
-                    <ul class="path-list">
-                        <li><i class="fa-solid fa-check-circle"></i> Exchange Basics</li>
-                        <li><i class="fa-solid fa-check-circle"></i> Stakeholders</li>
-                        <li><i class="fa-solid fa-check-circle"></i> EP Journey</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="path-card animate-on-scroll" style="transition-delay: 0.1s;">
-                <div class="path-header" style="background: linear-gradient(135deg, #10B981 0%, #34D399 100%);">
-                    <h3>Quality Path</h3>
-                    <p>For delivery improvement</p>
-                </div>
-                <div class="path-body">
-                    <ul class="path-list">
-                        <li><i class="fa-solid fa-check-circle" style="color: #10B981;"></i> Standards Management</li>
-                        <li><i class="fa-solid fa-check-circle" style="color: #10B981;"></i> Customer Experience</li>
-                        <li><i class="fa-solid fa-check-circle" style="color: #10B981;"></i> Documentation</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="path-card animate-on-scroll" style="transition-delay: 0.2s;">
-                <div class="path-header" style="background: linear-gradient(135deg, #F59E0B 0%, #FBBF24 100%);">
-                    <h3>Compliance Path</h3>
-                    <p>For compliance focus</p>
-                </div>
-                <div class="path-body">
-                    <ul class="path-list">
-                        <li><i class="fa-solid fa-check-circle" style="color: #F59E0B;"></i> Risk Prevention</li>
-                        <li><i class="fa-solid fa-check-circle" style="color: #F59E0B;"></i> Case Handling</li>
-                        <li><i class="fa-solid fa-check-circle" style="color: #F59E0B;"></i> Audit Readiness</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="path-card animate-on-scroll" style="transition-delay: 0.3s;">
-                <div class="path-header" style="background: linear-gradient(135deg, #8B5CF6 0%, #A78BFA 100%);">
-                    <h3>Leadership Path</h3>
-                    <p>For future leaders</p>
-                </div>
-                <div class="path-body">
-                    <ul class="path-list">
-                        <li><i class="fa-solid fa-check-circle" style="color: #8B5CF6;"></i> Coaching Teams</li>
-                        <li><i class="fa-solid fa-check-circle" style="color: #8B5CF6;"></i> Quality Leadership</li>
-                        <li><i class="fa-solid fa-check-circle" style="color: #8B5CF6;"></i> Building Exchange Culture</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <!-- Featured Resources -->
-    <section class="section section-main" style="background: var(--accent);">
-        <div class="section-header animate-on-scroll">
-            <h2 class="section-title">Featured Resources</h2>
-            <p class="section-subtitle">Essential tools and documentation for delivering standard-compliant exchanges.</p>
-        </div>
-        
-        <div class="resource-list animate-on-scroll">
-            <div class="resource-card">
-                <i class="fa-solid fa-file-pdf"></i>
-                <div class="resource-info">
-                    <h4>Exchange Standards Handbook</h4>
-                    <p style="font-size: 0.85rem; color: var(--text-muted);">PDF Document</p>
+            <!-- Teaser 3: The Knowledge (Education) -->
+            <section class="teaser-section section-light" style="background: var(--bg-main);">
+                <div class="teaser-container">
+                    <div class="teaser-content reveal-left">
+                        <div class="teaser-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                        <h2>The Knowledge Hub</h2>
+                        <p>Access our comprehensive library of Exchange Standards, National Policies, Toolkits, and Interactive Learning Tracks designed to elevate your delivery.</p>
+                        <a href="education.html" class="btn btn-outline teaser-btn">Access Academy <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <div class="teaser-visual reveal-right">
+                        <div class="resource-grid">
+                            <div class="resource-mini"><i class="fa-solid fa-book"></i> Standards</div>
+                            <div class="resource-mini"><i class="fa-solid fa-file-contract"></i> Policies</div>
+                            <div class="resource-mini"><i class="fa-solid fa-puzzle-piece"></i> Toolkits</div>
+                            <div class="resource-mini"><i class="fa-solid fa-clipboard-question"></i> FAQs</div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="resource-card">
-                <i class="fa-solid fa-map-location-dot"></i>
-                <div class="resource-info">
-                    <h4>EP Journey Guide</h4>
-                    <p style="font-size: 0.85rem; color: var(--text-muted);">Interactive Map</p>
-                </div>
-            </div>
-            <div class="resource-card">
-                <i class="fa-solid fa-book-bookmark"></i>
-                <div class="resource-info">
-                    <h4>Compliance Manual</h4>
-                    <p style="font-size: 0.85rem; color: var(--text-muted);">Policy Document</p>
-                </div>
-            </div>
-            <div class="resource-card">
-                <i class="fa-solid fa-folder-open"></i>
-                <div class="resource-info">
-                    <h4>Documentation Toolkit</h4>
-                    <p style="font-size: 0.85rem; color: var(--text-muted);">ZIP Archive</p>
-                </div>
-            </div>
-            <div class="resource-card">
-                <i class="fa-solid fa-triangle-exclamation"></i>
-                <div class="resource-info">
-                    <h4>Risk Prevention Guide</h4>
-                    <p style="font-size: 0.85rem; color: var(--text-muted);">Guidelines</p>
-                </div>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-grid">
-            <div class="footer-col">
-                <a href="index.html" class="nav-brand" style="color: white; margin-bottom: 20px;">
-                    <i class="fa-solid fa-shield-halved"></i> ECB <span style="color: var(--primary);">Sri Lanka</span>
-                </a>
-                <p style="color: #a0aec0; font-size: 0.9rem;">Building a culture of quality, compliance, participant safety, and exchange excellence.</p>
-            </div>
-            <div class="footer-col">
-                <h4>Quick Links</h4>
-                <ul class="footer-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About ECB</a></li>
-                    <li><a href="cases.html">Case Academy</a></li>
-                    <li><a href="community.html">Community</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Learning Resources</h4>
-                <ul class="footer-links">
-                    <li><a href="academy.html">Academy</a></li>
-                    <li><a href="learn.html#standards">Standards Center</a></li>
-                    <li><a href="resources.html">Resource Library</a></li>
-                    <li><a href="academy.html#quiz">Quiz Arena</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Contact Us</h4>
-                <ul class="footer-links">
-                    <li><i class="fa-solid fa-envelope" style="margin-right: 10px;"></i> ecb@aiesec.lk</li>
-                    <li><i class="fa-solid fa-location-dot" style="margin-right: 10px;"></i> Colombo, Sri Lanka</li>
-                </ul>
-                <div style="margin-top: 20px; display: flex; gap: 15px;">
-                    <a href="#" style="color: white; font-size: 1.5rem;"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#" style="color: white; font-size: 1.5rem;"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" style="color: white; font-size: 1.5rem;"><i class="fa-brands fa-linkedin"></i></a>
+            <!-- Teaser 4: The Framework (Compliance) -->
+            <section class="teaser-section section-dark">
+                <div class="teaser-container reverse">
+                    <div class="teaser-content reveal-right">
+                        <div class="teaser-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+                        <h2>Audit & Compliance</h2>
+                        <p>Transparency is key. Understand our compliance framework, how the audit process works, and access the latest Annual Audit Reports to see how we maintain organizational excellence.</p>
+                        <a href="compliance.html" class="btn btn-primary teaser-btn">View Framework <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <div class="teaser-visual reveal-left">
+                        <div class="audit-flow-preview">
+                            <div class="audit-step"><i class="fa-solid fa-file-invoice"></i> Review</div>
+                            <i class="fa-solid fa-arrow-right"></i>
+                            <div class="audit-step"><i class="fa-solid fa-clipboard-check"></i> Findings</div>
+                            <i class="fa-solid fa-arrow-right"></i>
+                            <div class="audit-step"><i class="fa-solid fa-check-double"></i> Closure</div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Entity Control Board - AIESEC in Sri Lanka. All Rights Reserved.</p>
-        </div>
-    </footer>
+            </section>
 
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <a href="index.html" class="nav-brand" style="color: white; margin-bottom: 20px;">
+                            <i class="fa-solid fa-shield-halved"></i> ECB <span style="color: var(--accent);">Sri Lanka</span>
+                        </a>
+                        <p style="color: #a0aec0; font-size: 0.9rem;">Building a culture of quality, compliance, participant safety, and exchange excellence.</p>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Explore</h4>
+                        <ul class="footer-links">
+                            <li><a href="about.html">About ECB</a></li>
+                            <li><a href="culture.html">Exchange Culture</a></li>
+                            <li><a href="education.html">Education Center</a></li>
+                            <li><a href="compliance.html">Audit & Compliance</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Contact & Support</h4>
+                        <ul class="footer-links">
+                            <li><a href="support.html">Get Assistance</a></li>
+                            <li><i class="fa-solid fa-envelope" style="margin-right: 10px;"></i> ecb@aiesec.lk</li>
+                            <li><i class="fa-solid fa-location-dot" style="margin-right: 10px;"></i> Colombo, Sri Lanka</li>
+                        </ul>
+                        <div style="margin-top: 20px; display: flex; gap: 15px;">
+                            <a href="#" style="color: white; font-size: 1.5rem;"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="#" style="color: white; font-size: 1.5rem;"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" style="color: white; font-size: 1.5rem;"><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 Entity Control Board - AIESEC in Sri Lanka. All Rights Reserved.</p>
+                </div>
+            </footer>
+
+        </div> <!-- end smooth-content -->
+    </div> <!-- end smooth-wrapper -->
+
+    <!-- Lenis & GSAP Scripts -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="main.js"></script>
 </body>
 </html>

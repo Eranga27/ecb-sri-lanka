@@ -2,20 +2,23 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
 
 :root {
-  --primary: #037EF3;
-  --primary-dark: #025bb3;
+  --primary: #0A1F44; /* Deep Navy */
+  --primary-dark: #051024;
   --secondary: #FFFFFF;
-  --accent: #E3F2FD;
-  --text-main: #333333;
-  --text-muted: #666666;
+  --accent: #D4AF37; /* Gold */
+  --accent-light: #F9F4E8;
+  --aiesec-blue: #037EF3;
+  --text-main: #1A202C;
+  --text-muted: #64748B;
   --bg-main: #F4F6F8;
-  --bg-dark: #0A192F;
-  --glass-bg: rgba(255, 255, 255, 0.8);
+  --bg-dark: #0A1F44;
+  --glass-bg: rgba(255, 255, 255, 0.7);
   --glass-border: rgba(255, 255, 255, 0.4);
+  --glass-bg-dark: rgba(10, 31, 68, 0.7);
   --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
   --shadow-md: 0 10px 20px rgba(0, 0, 0, 0.08);
   --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.12);
-  --transition: all 0.3s ease;
+  --transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 * {
@@ -527,6 +530,8 @@ h1, h2, h3, h4, h5, h6 {
   .hero-title { font-size: 3rem; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .nav-links { display: none; }
+  .teaser-container, .teaser-container.reverse { flex-direction: column; }
+  .teaser-visual { margin-top: 40px; justify-content: center; }
 }
 
 @media (max-width: 768px) {
@@ -534,3 +539,193 @@ h1, h2, h3, h4, h5, h6 {
   .stats-grid { grid-template-columns: 1fr; }
   .hero-buttons { flex-direction: column; }
 }
+
+/* Page Transition */
+.page-transition-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--primary);
+  z-index: 9999;
+  transform: translateY(100%);
+  pointer-events: none;
+}
+
+/* Teaser Layout */
+.teaser-section {
+  padding: 120px 5%;
+  overflow: hidden;
+}
+
+.teaser-container {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.teaser-container.reverse {
+  flex-direction: row-reverse;
+}
+
+.teaser-content {
+  flex: 1;
+}
+
+.teaser-icon {
+  font-size: 2.5rem;
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+
+.teaser-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--primary);
+}
+
+.section-dark .teaser-content h2 {
+  color: var(--secondary);
+}
+
+.teaser-content p {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-bottom: 30px;
+  line-height: 1.8;
+}
+
+.section-dark .teaser-content p {
+  color: #a0aec0;
+}
+
+.teaser-visual {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: var(--shadow-sm);
+  width: 100%;
+  max-width: 350px;
+  transition: var(--transition);
+}
+
+.section-dark .glass-card {
+  background: var(--glass-bg-dark);
+  color: var(--secondary);
+}
+
+.glass-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: var(--shadow-md);
+  border-color: var(--accent);
+}
+
+.glass-card h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+.section-dark .glass-card h3 { color: var(--accent); }
+
+/* Journey Preview */
+.journey-preview {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: var(--glass-bg-dark);
+  padding: 30px;
+  border-radius: 20px;
+  border: 1px solid var(--glass-border);
+}
+
+.journey-node {
+  background: var(--primary);
+  color: var(--secondary);
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.journey-node.active {
+  background: var(--accent);
+  color: var(--primary-dark);
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+}
+
+.journey-line {
+  height: 2px;
+  width: 40px;
+  background: rgba(255,255,255,0.2);
+}
+
+/* Resource Grid */
+.resource-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.resource-mini {
+  background: var(--secondary);
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  font-weight: 600;
+  color: var(--primary);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.resource-mini:hover {
+  background: var(--primary);
+  color: var(--secondary);
+  transform: translateY(-5px);
+}
+
+/* Audit Flow Preview */
+.audit-flow-preview {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: var(--secondary);
+}
+
+.audit-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255,255,255,0.1);
+  padding: 20px;
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.audit-step i { font-size: 2rem; color: var(--accent); }
+
+/* GSAP Start States */
+.reveal-up { opacity: 0; transform: translateY(50px); }
+.reveal-left { opacity: 0; transform: translateX(-50px); }
+.reveal-right { opacity: 0; transform: translateX(50px); }
