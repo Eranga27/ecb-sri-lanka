@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Center | ECB Sri Lanka</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .education-hero {
+            background: linear-gradient(135deg, rgba(10,31,68,0.9) 0%, rgba(5,16,36,0.95) 100%), url('assets/education_hero_placeholder.png') center/cover;
+            color: var(--secondary);
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 100px 5% 50px;
+        }
+
+        .education-hero h1 { font-size: 4rem; margin-bottom: 20px; color: var(--secondary); }
+        .education-hero p { font-size: 1.2rem; color: #a0aec0; max-width: 700px; margin: 0 auto; }
+
+        .search-container {
+            max-width: 800px;
+            margin: -40px auto 60px;
+            position: relative;
+            z-index: 10;
+            background: var(--secondary);
+            border-radius: 50px;
+            padding: 10px 20px;
+            box-shadow: var(--shadow-lg);
+            display: flex;
+            align-items: center;
+        }
+
+        .search-container input {
+            flex: 1;
+            border: none;
+            padding: 15px;
+            font-size: 1.1rem;
+            outline: none;
+            background: transparent;
+            font-family: inherit;
+        }
+
+        .search-container .search-btn {
+            background: var(--primary);
+            color: var(--secondary);
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .search-container .search-btn:hover { background: var(--accent); color: var(--primary-dark); }
+
+        .filters {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            padding: 8px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--primary);
+            color: var(--secondary);
+        }
+
+        .knowledge-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .knowledge-card {
+            background: var(--secondary);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            border-top: 4px solid transparent;
+        }
+
+        .knowledge-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            border-top-color: var(--accent);
+        }
+
+        .card-badge {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            background: var(--bg-main);
+            color: var(--primary);
+            width: fit-content;
+        }
+
+        .knowledge-card h3 { font-size: 1.3rem; margin-bottom: 15px; color: var(--primary-dark); }
+        .knowledge-card p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px; flex-grow: 1; }
+        
+        .download-link {
+            color: var(--primary);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+        }
+
+        .download-link:hover { color: var(--accent); }
+
+    </style>
+</head>
+<body>
+
+    <div class="page-transition-overlay"></div>
+
+    <nav class="navbar scrolled">
+        <a href="index.html" class="nav-brand">
+            <i class="fa-solid fa-shield-halved"></i> ECB <span>Sri Lanka</span>
+        </a>
+        <ul class="nav-links">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="culture.html" class="nav-link">Culture</a></li>
+            <li class="nav-item"><a href="education.html" class="nav-link" style="color: var(--primary);">Education</a></li>
+            <li class="nav-item"><a href="compliance.html" class="nav-link">Compliance</a></li>
+            <li class="nav-item"><a href="support.html" class="nav-link">Support</a></li>
+        </ul>
+        <a href="support.html" class="btn btn-primary nav-btn">Get Support</a>
+    </nav>
+
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+
+            <section class="education-hero">
+                <div class="hero-content">
+                    <h1 class="reveal-up">The <span class="text-gradient" style="background: linear-gradient(90deg, #D4AF37 0%, #FFF 100%); -webkit-background-clip: text;">Knowledge Hub</span></h1>
+                    <p class="reveal-up" style="transition-delay: 0.1s;">Empowering our members with the definitive guides, exchange standards, policies, and interactive resources necessary to deliver premium experiences.</p>
+                </div>
+            </section>
+
+            <div class="search-container reveal-up" style="transition-delay: 0.2s;">
+                <i class="fa-solid fa-search" style="color: var(--text-muted); margin-left: 10px;"></i>
+                <input type="text" id="searchInput" placeholder="Search policies, standards, templates...">
+                <button class="search-btn"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+
+            <section class="section section-light" style="padding-top: 20px;">
+                <div class="filters reveal-up">
+                    <button class="filter-btn active" onclick="filterDocs('all')">All Resources</button>
+                    <button class="filter-btn" onclick="filterDocs('standards')">Exchange Standards</button>
+                    <button class="filter-btn" onclick="filterDocs('policy')">National Policies</button>
+                    <button class="filter-btn" onclick="filterDocs('toolkit')">Toolkits & Guides</button>
+                </div>
+
+                <div class="knowledge-grid reveal-up">
+                    
+                    <!-- Card 1 -->
+                    <div class="knowledge-card doc-card" data-category="standards">
+                        <div class="card-badge">Standard</div>
+                        <h3>Global Exchange Standards Manual 2026</h3>
+                        <p>The comprehensive guide outlining the 16 minimum criteria expected to be fulfilled for every exchange participant globally.</p>
+                        <a href="#" class="download-link"><i class="fa-solid fa-download"></i> Download PDF</a>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="knowledge-card doc-card" data-category="policy">
+                        <div class="card-badge">Policy</div>
+                        <h3>National Anti-Harassment Policy</h3>
+                        <p>A strict framework ensuring the safety and well-being of all members and exchange participants interacting with AIESEC in Sri Lanka.</p>
+                        <a href="#" class="download-link"><i class="fa-solid fa-download"></i> Download PDF</a>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="knowledge-card doc-card" data-category="toolkit">
+                        <div class="card-badge">Toolkit</div>
+                        <h3>OPS/IPS Facilitation Deck</h3>
+                        <p>Standardized presentation slides and trainer notes for conducting Outgoing and Incoming Preparation Seminars.</p>
+                        <a href="#" class="download-link"><i class="fa-solid fa-file-powerpoint"></i> Download PPTX</a>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="knowledge-card doc-card" data-category="policy">
+                        <div class="card-badge">Policy</div>
+                        <h3>Crisis Management Protocol</h3>
+                        <p>Step-by-step procedures to follow in the event of an emergency, medical crisis, or severe standard break during an exchange.</p>
+                        <a href="#" class="download-link"><i class="fa-solid fa-download"></i> Download PDF</a>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="knowledge-card doc-card" data-category="standards">
+                        <div class="card-badge">Standard</div>
+                        <h3>Visa & Invitation Letter Guidelines</h3>
+                        <p>Documentation requirements and best practices for supporting Exchange Participants in acquiring necessary legal entry documents.</p>
+                        <a href="#" class="download-link"><i class="fa-solid fa-link"></i> View Guide</a>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="knowledge-card doc-card" data-category="toolkit">
+                        <div class="card-badge">Toolkit</div>
+                        <h3>Audit Preparation Checklist</h3>
+                        <p>A self-assessment toolkit for local committees to prepare for the bi-annual ECB Compliance Audit.</p>
+                        <a href="#" class="download-link"><i class="fa-solid fa-file-excel"></i> Download Excel</a>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <!-- Same footer structure -->
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <a href="index.html" class="nav-brand" style="color: white; margin-bottom: 20px;">
+                            <i class="fa-solid fa-shield-halved"></i> ECB <span style="color: var(--accent);">Sri Lanka</span>
+                        </a>
+                        <p style="color: #a0aec0; font-size: 0.9rem;">Building a culture of quality, compliance, participant safety, and exchange excellence.</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 Entity Control Board - AIESEC in Sri Lanka. All Rights Reserved.</p>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="main.js"></script>
+    <script>
+        // Simple client-side filtering
+        function filterDocs(category) {
+            // Update active button state
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            event.currentTarget.classList.add('active');
+
+            // Filter cards
+            const cards = document.querySelectorAll('.doc-card');
+            cards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            
+            // Refresh ScrollTrigger calculations after DOM change
+            if(typeof ScrollTrigger !== 'undefined') {
+                setTimeout(() => ScrollTrigger.refresh(), 100);
+            }
+        }
+
+        // Simple Search functionality
+        document.getElementById('searchInput').addEventListener('keyup', function(e) {
+            const term = e.target.value.toLowerCase();
+            const cards = document.querySelectorAll('.doc-card');
+            
+            cards.forEach(card => {
+                const title = card.querySelector('h3').innerText.toLowerCase();
+                const desc = card.querySelector('p').innerText.toLowerCase();
+                
+                if (title.includes(term) || desc.includes(term)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            
+            // Reset filters to visual "All" if searching
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelector('.filter-btn[onclick="filterDocs(\'all\')"]').classList.add('active');
+            
+            if(typeof ScrollTrigger !== 'undefined') {
+                setTimeout(() => ScrollTrigger.refresh(), 100);
+            }
+        });
+    </script>
+</body>
+</html>

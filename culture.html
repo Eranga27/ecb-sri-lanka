@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exchange Culture | ECB Sri Lanka</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .culture-hero {
+            background: linear-gradient(135deg, rgba(10,31,68,0.9) 0%, rgba(5,16,36,0.95) 100%), url('assets/culture_hero_placeholder.png') center/cover;
+            color: var(--secondary);
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 100px 5% 50px;
+        }
+
+        .culture-hero h1 { font-size: 4rem; margin-bottom: 20px; color: var(--secondary); }
+        .culture-hero p { font-size: 1.2rem; color: #a0aec0; max-width: 700px; margin: 0 auto; }
+
+        .journey-map-container {
+            position: relative;
+            max-width: 1000px;
+            margin: 60px auto;
+            background: var(--secondary);
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: var(--shadow-md);
+        }
+
+        .journey-steps {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .journey-line-bg {
+            position: absolute;
+            top: 30px;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--bg-main);
+            z-index: 1;
+        }
+
+        .journey-step {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            width: 120px;
+            cursor: pointer;
+        }
+
+        .step-icon {
+            width: 64px;
+            height: 64px;
+            background: var(--secondary);
+            border: 4px solid var(--bg-main);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-size: 1.5rem;
+            color: var(--text-muted);
+            transition: var(--transition);
+        }
+
+        .journey-step:hover .step-icon, .journey-step.active .step-icon {
+            border-color: var(--accent);
+            background: var(--primary);
+            color: var(--secondary);
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+        }
+
+        .step-content {
+            display: none;
+            margin-top: 40px;
+            padding: 30px;
+            background: var(--bg-main);
+            border-radius: 15px;
+            animation: fadeIn 0.5s ease forwards;
+        }
+
+        .step-content.active { display: block; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Core Principles */
+        .principles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="page-transition-overlay"></div>
+
+    <nav class="navbar scrolled">
+        <a href="index.html" class="nav-brand">
+            <i class="fa-solid fa-shield-halved"></i> ECB <span>Sri Lanka</span>
+        </a>
+        <ul class="nav-links">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="culture.html" class="nav-link" style="color: var(--primary);">Culture</a></li>
+            <li class="nav-item"><a href="education.html" class="nav-link">Education</a></li>
+            <li class="nav-item"><a href="compliance.html" class="nav-link">Compliance</a></li>
+            <li class="nav-item"><a href="support.html" class="nav-link">Support</a></li>
+        </ul>
+        <a href="support.html" class="btn btn-primary nav-btn">Get Support</a>
+    </nav>
+
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+
+            <section class="culture-hero">
+                <div class="hero-content">
+                    <h1 class="reveal-up">Exchange <span class="text-gradient" style="background: linear-gradient(90deg, #D4AF37 0%, #FFF 100%); -webkit-background-clip: text;">Culture</span></h1>
+                    <p class="reveal-up" style="transition-delay: 0.1s;">A culture built on accountability, quality delivery, and customer-centricity. Every exchange leaves an impact; we ensure it's a positive one.</p>
+                </div>
+            </section>
+
+            <section class="section section-light">
+                <div class="section-header reveal-up">
+                    <h2 class="section-title">The Interactive Journey Map</h2>
+                    <p class="section-subtitle">Understanding the exchange process from the perspective of an Exchange Participant (EP). Click on a phase to learn about the quality standards expected.</p>
+                </div>
+
+                <div class="journey-map-container reveal-up" style="transition-delay: 0.2s;">
+                    <div class="journey-line-bg"></div>
+                    <div class="journey-steps">
+                        <div class="journey-step active" onclick="showStep('attraction')">
+                            <div class="step-icon"><i class="fa-solid fa-magnet"></i></div>
+                            <h4>Attraction</h4>
+                        </div>
+                        <div class="journey-step" onclick="showStep('consideration')">
+                            <div class="step-icon"><i class="fa-solid fa-handshake"></i></div>
+                            <h4>Consideration</h4>
+                        </div>
+                        <div class="journey-step" onclick="showStep('preparation')">
+                            <div class="step-icon"><i class="fa-solid fa-suitcase"></i></div>
+                            <h4>Preparation</h4>
+                        </div>
+                        <div class="journey-step" onclick="showStep('realization')">
+                            <div class="step-icon"><i class="fa-solid fa-plane-departure"></i></div>
+                            <h4>Realization</h4>
+                        </div>
+                        <div class="journey-step" onclick="showStep('reintegration')">
+                            <div class="step-icon"><i class="fa-solid fa-house"></i></div>
+                            <h4>Reintegration</h4>
+                        </div>
+                    </div>
+
+                    <div id="attraction" class="step-content active">
+                        <h3 style="color: var(--primary); margin-bottom: 10px;">Attraction Phase</h3>
+                        <p>Setting the right expectations is crucial. In this phase, marketing materials must be honest and aligned with actual national realities. No false promises.</p>
+                    </div>
+                    <div id="consideration" class="step-content">
+                        <h3 style="color: var(--primary); margin-bottom: 10px;">Consideration Phase</h3>
+                        <p>Ensuring transparent communication during interviews, proper expectation setting regarding Job Descriptions (JD), and clear visa guidelines.</p>
+                    </div>
+                    <div id="preparation" class="step-content">
+                        <h3 style="color: var(--primary); margin-bottom: 10px;">Preparation Phase</h3>
+                        <p>Delivering comprehensive Outgoing Preparation Seminars (OPS) and Incoming Preparation Seminars (IPS). Ensuring insurance and safety protocols are understood.</p>
+                    </div>
+                    <div id="realization" class="step-content">
+                        <h3 style="color: var(--primary); margin-bottom: 10px;">Realization Phase</h3>
+                        <p>The core experience. Ensuring 100% adherence to Exchange Standards: pickup, accommodation, first day of work, job description fulfillment, and continuous support.</p>
+                    </div>
+                    <div id="reintegration" class="step-content">
+                        <h3 style="color: var(--primary); margin-bottom: 10px;">Reintegration Phase</h3>
+                        <p>Closing the experience through Reintegration Seminars (RIS), feedback collection, and ensuring the participant has reflected on their leadership development journey.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section section-dark">
+                <div class="section-header reveal-up">
+                    <h2 class="section-title">Core Exchange Principles</h2>
+                    <p class="section-subtitle">The foundational pillars that protect our integrity.</p>
+                </div>
+                
+                <div class="principles-grid">
+                    <div class="glass-card reveal-up">
+                        <h3 style="color: var(--accent);"><i class="fa-solid fa-scale-balanced"></i> Responsibility</h3>
+                        <p style="color: var(--secondary);">Every member is responsible for the safety and quality of the experiences we provide.</p>
+                    </div>
+                    <div class="glass-card reveal-up" style="transition-delay: 0.1s;">
+                        <h3 style="color: var(--accent);"><i class="fa-solid fa-heart"></i> Customer-Centricity</h3>
+                        <p style="color: var(--secondary);">Putting the needs and well-being of our Exchange Participants and Partners first.</p>
+                    </div>
+                    <div class="glass-card reveal-up" style="transition-delay: 0.2s;">
+                        <h3 style="color: var(--accent);"><i class="fa-solid fa-gavel"></i> Accountability</h3>
+                        <p style="color: var(--secondary);">Taking ownership of mistakes and actively working to resolve cases when standards are not met.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <!-- Same footer structure as index.html -->
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <a href="index.html" class="nav-brand" style="color: white; margin-bottom: 20px;">
+                            <i class="fa-solid fa-shield-halved"></i> ECB <span style="color: var(--accent);">Sri Lanka</span>
+                        </a>
+                        <p style="color: #a0aec0; font-size: 0.9rem;">Building a culture of quality, compliance, participant safety, and exchange excellence.</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 Entity Control Board - AIESEC in Sri Lanka. All Rights Reserved.</p>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="main.js"></script>
+    <script>
+        function showStep(stepId) {
+            document.querySelectorAll('.step-content').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.journey-step').forEach(el => el.classList.remove('active'));
+            
+            document.getElementById(stepId).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+</body>
+</html>
